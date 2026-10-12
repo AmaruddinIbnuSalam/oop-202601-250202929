@@ -8,7 +8,7 @@ public final class HelloFungsional {
 
     private HelloFungsional() {
     }
-
+    core/src/main/resources/mahasiswa.properties
     /**
      * TODO minggu 1: kembalikan fungsi yang menerima NAMA dan menghasilkan sapaan
      * yang memuat "Aset-Pinjam", nama tersebut, dan NIM yang diberikan. Gunakan lambda.

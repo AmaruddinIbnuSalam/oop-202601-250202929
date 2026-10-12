@@ -13,8 +13,8 @@ public class HelloOOP {
 
     /** TODO minggu 1: sapaan memuat "Aset-Pinjam", nama, dan NIM. */
     public String sapa() {
-        throw new UnsupportedOperationException("TODO minggu 1: HelloOOP.sapa");
-    }
+        return "Hallo Aset-Pinjam, saya" + this.nama +  "(" + this.nim + ")";
+        }
 
     public static void main(String[] args) {
         Varian v = Varian.aktif();
