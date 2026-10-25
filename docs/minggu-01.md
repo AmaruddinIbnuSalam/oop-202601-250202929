@@ -5,7 +5,7 @@ Bobot: Quiz 2%, Praktikum 3%, Observasi 1%.
 ## Tujuan
 
 - Membedakan paradigma prosedural, OOP, dan functional lewat satu program kecil yang sama.
-- Menyiapkan JDK 21, Maven, Git, dan repo.
+- Menyiapkan JDK 25 (LTS), Maven, Git, dan repo.
 
 ## Yang dikerjakan
 

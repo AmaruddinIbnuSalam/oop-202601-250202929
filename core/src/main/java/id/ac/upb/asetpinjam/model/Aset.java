@@ -1,5 +1,7 @@
 package id.ac.upb.asetpinjam.model;
 
+import java.util.Objects;
+
 import id.ac.upb.asetpinjam.kontrak.DapatDipinjam;
 
 /**
@@ -12,45 +14,64 @@ import id.ac.upb.asetpinjam.kontrak.DapatDipinjam;
  * (TestSupport.aset(...) di folder test menyesuaikan sendiri, lihat docs/minggu-05.md).
  */
 public class Aset implements DapatDipinjam {
+    private final String kode;
+    private String nama;
+    private StatusAset status;
+    private Kondisi kondisi;
+
 
     // TODO minggu 2: field private: kode, nama, status (default TERSEDIA), kondisi (default BAIK).
 
     /** TODO minggu 2: kode dan nama tidak boleh null atau kosong (IllegalArgumentException). */
     public Aset(String kode, String nama) {
-        throw new UnsupportedOperationException("TODO minggu 2: konstruktor Aset");
+        this.kode= validasiTeks(kode, "kode");
+        this.nama= validasiTeks(nama, "nama");
+        this.status=StatusAset.TERSEDIA;
+        this.kondisi=Kondisi.BAIK;
     }
 
     public String getKode() {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        return kode;
     }
 
     public String getNama() {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        return nama;
     }
 
     public StatusAset getStatus() {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        return status;
     }
 
     public Kondisi getKondisi() {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        return kondisi;
     }
 
     /** TODO minggu 2: nama baru tidak boleh kosong. */
     public void setNama(String nama) {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        this.nama= validasiTeks(nama, "nama");
     }
 
     /** TODO minggu 2: status tidak boleh null. */
     public void setStatus(StatusAset status) {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        if (status == null){
+            throw new IllegalArgumentException("Status tidak boleh null");
+        }
+        this.status=status;
     }
 
     /** TODO minggu 2: kondisi tidak boleh null. */
     public void setKondisi(Kondisi kondisi) {
-        throw new UnsupportedOperationException("TODO minggu 2");
+        if (kondisi == null){
+            throw new IllegalArgumentException("Kondisi tidak boleh null");
+        }
+        this.kondisi=kondisi;
     }
-
+    private static String validasiTeks(String nilai, String label) {
+        if (nilai == null || nilai.trim().isEmpty()) {
+            throw new IllegalArgumentException(label + " tidak boleh null atau kosong");
+        }
+        return nilai.trim();
+    }
     /** TODO minggu 5: true hanya jika status TERSEDIA dan kondisi bukan RUSAK_BERAT. */
     @Override
     public boolean bisaDipinjam() {

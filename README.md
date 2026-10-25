@@ -11,7 +11,7 @@ Semua tugas dikerjakan **individu**, bertahap selama 16 pertemuan pada satu proy
    Tiap minggu: `git fetch upstream` lalu `git merge upstream/main` untuk mendapat tes dan dokumen baru.
 3. Isi **`core/src/main/resources/mahasiswa.properties`** dengan NIM dan nama Anda.
    NIM menentukan varian aturan Anda (lihat [docs/varian.md](docs/varian.md)). Tes akan gagal sampai diisi.
-4. Pasang JDK 21 dan Maven. Cek dengan `java -version` dan `mvn -v`.
+4. Pasang JDK 25 (LTS) dan Maven. Cek dengan `java -version` dan `mvn -v`.
 5. Baca [docs/kebijakan-ai.md](docs/kebijakan-ai.md) sebelum mengerjakan apa pun.
 6. Kerjakan minggu aktif: baca `docs/minggu-NN.md`, lengkapi bagian bertanda `TODO`, jalankan tes.
 

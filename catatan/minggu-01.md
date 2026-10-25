@@ -1,7 +1,6 @@
 # CCatatan Minggu 01: Paradigma Pemrograman dan Setup
 
 ## Yang saya kerjakan
-(2-5 kalimat dengan bahasa Anda sendiri)
 saya menyiapkan JDK21 dan maven lalu saya mengisi Todo pada ketiga class:
 yaitu HelloProsedural, HelloOOP, dan HelloFungsional,Ketiganya menghasilkan sapaan yang sama, yaitu memuat "Aset-Pinjam", nama, dan NIM. Saya juga mengisi mahasiswa.properties dengan nama dan NIM saya. Hasil akhirnya, Minggu01Test lolos dengan 5 tes, 0 gagal, tetapi ada satu pada bagian demo 1.0-SNAPSHOT masih FAILURE saya belum menemukan dimana letak keliruan nya.
 ## Keputusan desain
