@@ -66,7 +66,8 @@ public class Aset implements DapatDipinjam {
         }
         this.kondisi=kondisi;
     }
-    private static String validasiTeks(String nilai, String label) {
+    /** Dipakai juga oleh subclass agar aturan teks tetap satu sumber. */
+    protected static String validasiTeks(String nilai, String label) {
         if (nilai == null || nilai.trim().isEmpty()) {
             throw new IllegalArgumentException(label + " tidak boleh null atau kosong");
         }
