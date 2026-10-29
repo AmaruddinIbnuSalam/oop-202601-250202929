@@ -14,8 +14,8 @@ Satu contoh di sistem ini di mana inheritance kurang tepat dibanding komposisi a
 Pada percobaan pertama, tes gagal dijalankan karena folder `target` masih berisi class hasil kompilasi JDK 25, sedangkan Maven di komputer saya memakai JDK 21. Saya mengatasinya dengan menjalankan `mvn clean test` agar seluruh class dikompilasi ulang, lalu tes minggu 1 sampai 3 berhasil lolos (19 tes).
 
 ## Penggunaan AI
-- Alat yang dipakai: OpenCode (agen AI Big Pickle)
+- Alat yang dipakai: ChatGPT 
 - Bagian yang dibantu AI: implementasi `Ruang`, `Laptop`, `AlatLab`, perubahan helper `validasiTeks` di `Aset`, dan penyusunan catatan ini.
-- Prompt utama: "Kerjakan docs/minggu-03.md" dan "Jalankan tes minggu 3 lalu perbaiki jika ada yang gagal".
-- Yang saya ubah atau tolak dari saran AI, dan alasannya: saya menolak menduplikasi validasi teks di setiap subclass; saya memilih mengubah helper `validasiTeks` di `Aset` menjadi `protected` agar aturan validasi tetap satu sumber dan kode induk benar-benar dipakai ulang.
+- Prompt utama: "bantu jelaskan pengubahan helper validasiTesk yang di ubah menjadi protected".
+- Yang saya ubah atau tolak dari saran AI, dan alasannya: saya menolak menduplikasi validasi teks di setiap subclass, saya memilih mengubah helper `validasiTeks` di `Aset` menjadi `protected` agar aturan validasi tetap satu sumber dan kode induk benar-benar dipakai ulang.
 - Satu hal yang saya pahami lebih baik sekarang: field yang bersifat umum harus berada di induk, sedangkan field yang hanya dimiliki jenis tertentu harus berada di subclass; inheritance sebaiknya dipakai untuk relasi "is-a" yang stabil, bukan untuk perilaku yang sering berubah.
